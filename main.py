@@ -1,5 +1,3 @@
-import logging
-import logging.handlers
 import os
 
 with open('readme.txt', 'w') as f:
