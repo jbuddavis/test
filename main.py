@@ -1,4 +1,4 @@
 import os
 
-with open('readme.txt', 'w') as f:
+with open('itworked.txt', 'w') as f:
     f.write('Create a new text file!')
