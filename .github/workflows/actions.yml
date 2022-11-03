@@ -21,6 +21,8 @@ jobs:
           pip install -r requirements.txt
           
       - name: execute py script # run main.py
+        env:
+          CFBD_SECRET: ${{ secrets.CFBD_SECRET }}
         run: python main.py
         
       - name: commit files
