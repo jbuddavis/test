@@ -7,9 +7,9 @@ from sklearn import linear_model
 pd.options.mode.chained_assignment = None
 
 try:
-    CFBD_SECRET = os.environ["CFBD_SECRET"]
+    SOME_SECRET = os.environ["CFBD_SECRET"]
 except KeyError:
-    CFBD_SECRET = "key not available!"
+    SOME_SECRET = "key not available!"
 
 ### --------------------------------------------------------------------------
 ### PART 1 - Opponent Adjustment Function
@@ -77,7 +77,7 @@ def adjFunc(df, stat, category):
 #%% Configure Inputs
 # Configure API key authorization
 configuration = cfbd.Configuration()
-configuration.api_key['Authorization'] = CFBD_SECRET
+configuration.api_key['Authorization'] = SOME_SECRET
 configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Choose what year you would like to perform adjustment on
