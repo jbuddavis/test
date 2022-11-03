@@ -6,6 +6,9 @@ from sklearn import linear_model
 # https://github.com/jbuddavis
 pd.options.mode.chained_assignment = None
 
+# Choose what year you would like to perform adjustment on
+year = 2022 # year of interest
+
 try:
     CFBD_SECRET = os.environ["CFBD_SECRET"]
 except KeyError:
@@ -80,9 +83,6 @@ def adjFunc(df, stat, category):
 configuration = cfbd.Configuration()
 configuration.api_key['Authorization'] = CFBD_SECRET
 configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Choose what year you would like to perform adjustment on
-year = 2022 # year of interest
 
 #%% Ping the API
 # create empty dataframes to be filled
