@@ -10,7 +10,8 @@ try:
     CFBD_SECRET = os.environ["CFBD_SECRET"]
 except KeyError:
     CFBD_SECRET = "key not available!"
-
+print("TEST")
+    
 ### --------------------------------------------------------------------------
 ### PART 1 - Opponent Adjustment Function
 ### --------------------------------------------------------------------------
