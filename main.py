@@ -1,1 +1,1 @@
-print("TEST")
+print("TIMER IS LOCAL")
