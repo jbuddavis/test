@@ -24,12 +24,12 @@ def adjFunc(df, stat, category):
     
     # Hyperparameter tuning for alpha (aka lambda, ie the penalty term) 
     # for full season PBP data, the alpha will be 150-200, for smaller sample sizes it may find a higher alpha
-    rdcv = linear_model.RidgeCV(alphas = [75,100,125,150,175,200,225,250,275,300,325], fit_intercept = True)
-    rdcv.fit(dfDummies,df[stat]);
-    alf = rdcv.alpha_
+    # rdcv = linear_model.RidgeCV(alphas = [75,100,125,150,175,200,225,250,275,300,325], fit_intercept = True)
+    # rdcv.fit(dfDummies,df[stat]);
+    # alf = rdcv.alpha_
     
     # Or set Alpha directly here
-    # alf = 175
+    alf = 175
     
     # Set up ridge regression model parameters
     reg = linear_model.Ridge(alpha = alf, fit_intercept = True)  
